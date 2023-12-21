@@ -3,4 +3,5 @@
 [ext_resource path="res://Assets/Fonts/battlenet copy/battlenet1.ttf" type="DynamicFontData" id=1]
 
 [resource]
+size = 32
 font_data = ExtResource( 1 )
