@@ -171,7 +171,8 @@ margin_right = 800.0
 margin_bottom = 105.0
 rect_min_size = Vector2( 800, 105 )
 custom_fonts/font = ExtResource( 7 )
-text = "Cont..., go to the inner square of the object and press Enter (Microsoft/google Devices) or Return (Mac Devices). "
+text = "testing peramitiers 4 
+40404040404040404004040404040404040400404040404004040404004"
 autowrap = true
 clip_text = true
 __meta__ = {
