@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Screenshot 2023-12-11 at 4.19.11 PM.png-933d824b0a325f987c1601feba7062ab.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://Assets/Images/Screenshot 2023-12-11 at 4.19.11 PM.png"
-dest_files=[ "res://.import/Screenshot 2023-12-11 at 4.19.11 PM.png-933d824b0a325f987c1601feba7062ab.stex" ]
-
+source_file="res://Assets/Images/path2.png"
 [params]
 
 compress/mode=0
