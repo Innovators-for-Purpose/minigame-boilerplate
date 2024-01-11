@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://MinigameBoilerplate.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -8,10 +8,9 @@
 [ext_resource path="res://Scenes/Control2.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scenes/Control.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Images/Screenshot 2023-12-11 at 4.17.41 PM copy.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Images/Screenshot 2023-12-11 at 4.15.49 PM copy.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Images/Screenshot 2023-12-11 at 4.19.11 PM copy.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Images/Screenshot 2023-12-11 at 4.19.11 PM.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Images/g2.svg" type="Texture" id=10]
+[ext_resource path="res://Assets/Images/g3.svg" type="Texture" id=11]
+[ext_resource path="res://Assets/Images/Path3.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Timer.gd" type="Script" id=13]
 
 [sub_resource type="Gradient" id=6]
@@ -39,6 +38,14 @@ extents = Vector2( 480, 5 )
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StreamTexture" id=11]
+flags = 4
+load_path = "res://.import/path2.svg-4bd0ffe58bd15809f83e75aefc2eb063.stex"
+
+[sub_resource type="StreamTexture" id=10]
+flags = 4
+load_path = "res://.import/path2.png-dd66814809248d7b76a90b02d4b93ce6.stex"
 
 [node name="MinigameBoilerplate" type="Node2D"]
 script = ExtResource( 1 )
@@ -212,11 +219,8 @@ margin_right = 850.0
 margin_bottom = 105.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
-texture = ExtResource( 10 )
-region_rect = Rect2( 3, 0, 213, 69 )
-patch_margin_left = 10
-patch_margin_right = 26
-patch_margin_bottom = 2
+texture = SubResource( 11 )
+region_rect = Rect2( 0, 0, 3484, 1009 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -250,19 +254,16 @@ margin_right = 420.0
 margin_bottom = 105.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
-texture = ExtResource( 9 )
-region_rect = Rect2( -1, 0, 222, 62 )
-patch_margin_left = 44
-patch_margin_top = 9
-patch_margin_right = 31
+texture = ExtResource( 12 )
+region_rect = Rect2( -13, 2, 12992, 3729 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="Label" type="Label" parent="Control2/Panel2"]
-margin_left = 15.0
+margin_left = 40.0
 margin_top = 15.0
-margin_right = 399.0
+margin_right = 400.0
 margin_bottom = 85.0
 custom_fonts/font = ExtResource( 7 )
 text = "dhoifhadiafjkdsujkfhdsakfuasdhjhfhdsahfhasdnmfjasdjjufndksahjkfuadshfjkuadsnjdhfidsakjhfnjadsjbfijdafsukjfikajsdjnfkdsafjnmsdjf"
@@ -289,11 +290,13 @@ margin_right = 850.0
 margin_bottom = 105.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
-texture = ExtResource( 10 )
-region_rect = Rect2( 3, 0, 213, 69 )
+texture = SubResource( 11 )
+region_rect = Rect2( 3, 0, 3486, 1013 )
 patch_margin_left = 10
-patch_margin_right = 26
+patch_margin_right = 2
 patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 __meta__ = {
 "_editor_description_": ""
 }
@@ -308,13 +311,20 @@ text = "dhoifhadiafjkdsujkfhdsakfuasdhjhfhdsahfhasdnmfjasdjjufndksahjkfuadshfjku
 autowrap = true
 clip_text = true
 
+[node name="TextureRect" type="TextureRect" parent="Control2/Panel3"]
+margin_right = 3388.0
+margin_bottom = 1267.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = SubResource( 10 )
+stretch_mode = 1
+
 [node name="NinePatchRect" type="NinePatchRect" parent="Control2"]
 margin_left = 635.0
 margin_top = 40.0
 margin_right = 760.0
 margin_bottom = 95.0
-texture = ExtResource( 12 )
-region_rect = Rect2( 19, 0, 387, 170 )
+texture = ExtResource( 10 )
+region_rect = Rect2( 42, 60, 3411, 1558 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -325,15 +335,15 @@ margin_top = 225.0
 margin_right = 325.0
 margin_bottom = 280.0
 texture = ExtResource( 11 )
-region_rect = Rect2( 19, 0, 387, 170 )
+region_rect = Rect2( -24, -63, 3405, 1573 )
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="Control2"]
 margin_left = 635.0
 margin_top = 415.0
 margin_right = 760.0
 margin_bottom = 470.0
-texture = ExtResource( 12 )
-region_rect = Rect2( 19, 0, 387, 170 )
+texture = ExtResource( 10 )
+region_rect = Rect2( 19, 0, 3523, 1668 )
 __meta__ = {
 "_editor_description_": ""
 }
