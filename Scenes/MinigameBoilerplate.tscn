@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://MinigameBoilerplate.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Control2.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scenes/Control.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Images/drawing.svg.svg" type="Texture" id=9]
 [ext_resource path="res://Assets/Images/g2.svg" type="Texture" id=10]
 [ext_resource path="res://Assets/Images/g3.svg" type="Texture" id=11]
 [ext_resource path="res://Assets/Images/Path3.png" type="Texture" id=12]
@@ -36,16 +37,15 @@ extents = Vector2( 5, 270 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 480, 5 )
 
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 0.490196 )
+
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="StreamTexture" id=11]
 flags = 4
 load_path = "res://.import/path2.svg-4bd0ffe58bd15809f83e75aefc2eb063.stex"
-
-[sub_resource type="StreamTexture" id=10]
-flags = 4
-load_path = "res://.import/path2.png-dd66814809248d7b76a90b02d4b93ce6.stex"
 
 [node name="MinigameBoilerplate" type="Node2D"]
 script = ExtResource( 1 )
@@ -123,7 +123,6 @@ position = Vector2( 480, 545 )
 shape = SubResource( 5 )
 
 [node name="Control" type="Control" parent="."]
-visible = false
 script = ExtResource( 8 )
 
 [node name="Panel" type="Panel" parent="Control"]
@@ -132,7 +131,7 @@ margin_top = 405.0
 margin_right = 900.0
 margin_bottom = 510.0
 input_pass_on_modal_close_click = false
-custom_styles/panel = SubResource( 9 )
+custom_styles/panel = SubResource( 12 )
 
 [node name="Dialogue" type="MarginContainer" parent="Control"]
 margin_left = 100.0
@@ -144,7 +143,7 @@ rect_clip_content = true
 input_pass_on_modal_close_click = false
 
 [node name="Label" type="Label" parent="Control/Dialogue"]
-margin_right = 750.0
+margin_right = 800.0
 margin_bottom = 105.0
 rect_min_size = Vector2( 750, 105 )
 custom_fonts/font = ExtResource( 7 )
@@ -153,7 +152,6 @@ autowrap = true
 clip_text = true
 
 [node name="Label2" type="Label" parent="Control/Dialogue"]
-visible = false
 margin_right = 800.0
 margin_bottom = 105.0
 rect_min_size = Vector2( 800, 105 )
@@ -166,7 +164,6 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="Control/Dialogue"]
-visible = false
 margin_right = 800.0
 margin_bottom = 105.0
 rect_min_size = Vector2( 800, 105 )
@@ -180,7 +177,6 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="Control/Dialogue"]
-visible = false
 margin_right = 800.0
 margin_bottom = 105.0
 rect_min_size = Vector2( 800, 105 )
@@ -255,7 +251,7 @@ margin_bottom = 105.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
 texture = ExtResource( 12 )
-region_rect = Rect2( -13, 2, 12992, 3729 )
+region_rect = Rect2( -29, 2, 15811, 4553 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -290,13 +286,10 @@ margin_right = 850.0
 margin_bottom = 105.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
-texture = SubResource( 11 )
-region_rect = Rect2( 3, 0, 3486, 1013 )
+texture = ExtResource( 9 )
+region_rect = Rect2( 6, 8, 3476, 1360 )
 patch_margin_left = 10
 patch_margin_right = 2
-patch_margin_bottom = 2
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 __meta__ = {
 "_editor_description_": ""
 }
@@ -310,13 +303,6 @@ custom_fonts/font = ExtResource( 7 )
 text = "dhoifhadiafjkdsujkfhdsakfuasdhjhfhdsahfhasdnmfjasdjjufndksahjkfuadshfjkuadsnjdhfidsakjhfnjadsjbfijdafsukjfikajsdjnfkdsafjnmsdjf"
 autowrap = true
 clip_text = true
-
-[node name="TextureRect" type="TextureRect" parent="Control2/Panel3"]
-margin_right = 3388.0
-margin_bottom = 1267.0
-rect_scale = Vector2( 0.1, 0.1 )
-texture = SubResource( 10 )
-stretch_mode = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control2"]
 margin_left = 635.0

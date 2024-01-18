@@ -13,7 +13,9 @@ var active_dialogue = 0
 func _on_Timer_timeout():
 	active_dialogue = active_dialogue+1
 
+
 func _ready():
+
 	Back.hide()
 	print("Back.hidden", !Back.visible)
 	Panel1.hide()
@@ -30,6 +32,8 @@ func _ready():
 	print("ID3.hidden", !ID3.visible)
 
 func _physics_process(delta):
+	if  Input.is_action_just_pressed("Shift"):
+		active_dialogue = 7
 	if active_dialogue == 1:
 		Back.show()
 		ID1.show()
@@ -86,5 +90,3 @@ func _physics_process(delta):
 		Panel1.hide()
 		Panel2.hide()
 		Panel3.hide()
-
-
